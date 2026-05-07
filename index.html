@@ -1,227 +1,248 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Автосервиз Слави</title>
 
 <style>
-    :root {
-        --red: #d93523;
-        --dark: #1a1a1a;
-        --light-bg: #faf8f6;
-        --box-bg: #ffffff;
-        --shadow: rgba(0,0,0,0.08);
-    }
-
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: var(--light-bg);
-        color: var(--dark);
+        font-family: "Arial", sans-serif;
+        background: #f3eadd;
+        color: #1a1a1a;
     }
 
-    /* HERO */
+    .hero-container {
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 25px;
+        background: #f7f1e8;
+    }
+
     .hero {
-        background: url("[images.unsplash.com](https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=2000&q=80)") center/cover no-repeat;
-        padding: 90px 20px 120px;
-        color: var(--dark);
-    }
-    .hero h2 {
-        font-size: 64px;
-        margin: 0;
-        font-weight: 900;
-    }
-    .hero h1 {
-        font-size: 72px;
-        margin: 0;
-        font-weight: 900;
-        color: var(--red);
-    }
-    .subtitle {
-        margin-top: 18px;
-        font-size: 20px;
-        letter-spacing: 1px;
-        font-weight: 500;
+        position: relative;
+        border-radius: 25px;
+        overflow: hidden;
     }
 
-    /* CONTACT BOXES */
-    .contacts {
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: brightness(0.55);
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 25%;
+        left: 6%;
+        color: #fff;
+        font-family: Georgia, serif;
+    }
+
+    .hero-text h1 {
+        font-size: 52px;
+        margin: 0;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    .hero-text .btn {
+        display: inline-block;
+        margin-top: 18px;
+        background: #d93523;
+        color: #fff;
+        padding: 12px 28px;
+        font-size: 16px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Phone Blocks */
+    .contact-row {
         display: flex;
         justify-content: center;
         gap: 20px;
-        margin: -60px auto 40px;
-        max-width: 900px;
+        margin: 25px auto;
         flex-wrap: wrap;
     }
+
     .contact-box {
-        background: var(--box-bg);
-        padding: 25px 30px;
-        border-radius: 12px;
-        width: 350px;
-        text-align: center;
-        box-shadow: 0 2px 10px var(--shadow);
-    }
-    .contact-box .label {
-        color: var(--red);
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    .contact-box .phone {
-        font-size: 26px;
-        font-weight: 700;
+        width: 300px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 18px 22px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
-    /* SERVICES */
+    .contact-icon {
+        background: #ffe4e4;
+        padding: 14px;
+        border-radius: 50%;
+    }
+
+    .contact-icon img {
+        width: 28px;
+        opacity: 0.8;
+    }
+
+    .contact-label {
+        font-size: 12px;
+        color: #888;
+        letter-spacing: 1px;
+    }
+
+    .contact-phone {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1a1a1a;
+    }
+
+    /* Title */
     .section-title {
         text-align: center;
-        font-size: 30px;
-        font-weight: 800;
-        margin: 40px 0 25px;
+        margin: 40px 0 20px;
+        font-size: 28px;
+        font-family: Georgia, serif;
+        font-weight: bold;
     }
 
+    .section-title img {
+        width: 22px;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+
+    /* Services Grid */
     .services {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-        max-width: 1050px;
+        max-width: 1100px;
         margin: auto;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 22px;
     }
 
     .service-box {
-        background: var(--box-bg);
-        padding: 35px 25px;
-        border-radius: 12px;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 25px;
         text-align: center;
-        box-shadow: 0 2px 10px var(--shadow);
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
     }
 
-    .service-box img {
-        width: 75px;
-        margin-bottom: 15px;
+    .service-icon {
+        background: #ffe4e4;
+        padding: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+
+    .service-icon img {
+        width: 40px;
+        opacity: 0.85;
     }
 
     .service-title {
-        font-weight: 700;
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 8px;
     }
 
     .service-desc {
-        font-size: 15px;
-        line-height: 1.4;
-        color: #444;
+        font-size: 14px;
+        color: #555;
     }
 
-    /* INFO GRID */
-    .info-grid {
-        max-width: 1050px;
-        margin: 55px auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-        gap: 20px;
-    }
-
-    .info-box {
-        background: var(--box-bg);
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px var(--shadow);
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .info-title {
-        color: var(--red);
-        font-weight: 700;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    /* BOTTOM IMAGE */
-    .bottom-image img {
-        width: 100%;
-        border-radius: 12px;
-        margin: 30px 0 50px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-        .hero h1 { font-size: 54px; }
-        .hero h2 { font-size: 48px; }
-        .contact-box { width: 100%; }
-    }
 </style>
 </head>
 <body>
 
-<div class="hero">
-    <h2>АВТОСЕРВИЗ</h2>
-    <h1>СЛАВИ</h1>
-    <div class="subtitle">ПРОФЕСИОНАЛНИ АВТО УСЛУГИ</div>
-</div>
-
-<div class="contacts">
-    <div class="contact-box">
-        <div class="label">СЕРВИЗ</div>
-        <div class="phone">087 668 9736</div>
-    </div>
-    <div class="contact-box">
-        <div class="label">ПРЕГЛЕДИ (ГТП)</div>
-        <div class="phone">088 897 3069</div>
+<div class="hero-container">
+    <div class="hero">
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=2000&q=80)" alt="">
+        <div class="hero-text">
+            <h1>АВТОСЕРВИЗ<br>СЛАВИ</h1>
+            <a href="#" class="btn">ПРОФЕСИОНАЛНИ АВТО УСЛУГИ</a>
+        </div>
     </div>
 </div>
 
-<div class="section-title">НАШИТЕ УСЛУГИ</div>
+<!-- CONTACT ROW -->
+<div class="contact-row">
 
+    <div class="contact-box">
+        <div class="contact-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/724/724664.png)">
+        </div>
+        <div>
+            <div class="contact-label">СЕРВИЗ</div>
+            <div class="contact-phone">087 668 9736</div>
+        </div>
+    </div>
+
+    <div class="contact-box">
+        <div class="contact-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828911.png)">
+        </div>
+        <div>
+            <div class="contact-label">ПРЕГЛЕДИ (ГТП)</div>
+            <div class="contact-phone">088 897 3069</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- SERVICES TITLE -->
+<div class="section-title">
+    <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828970.png)">
+    НАШИТЕ УСЛУГИ
+    <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828970.png)">
+</div>
+
+<!-- SERVICES GRID -->
 <div class="services">
 
     <div class="service-box">
-        <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/847/847969.png)" alt="">
+        <div class="service-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/847/847969.png)">
+        </div>
         <div class="service-title">МОНТАЖ НА АГУ</div>
         <div class="service-desc">Професионален монтаж и настройка на газови уредби</div>
     </div>
 
     <div class="service-box">
-        <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/2965/2965879.png)" alt="">
+        <div class="service-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/2965/2965879.png)">
+        </div>
         <div class="service-title">АВТОРЕМОНТИ</div>
         <div class="service-desc">Диагностика, ремонт и поддръжка на всички марки</div>
     </div>
 
     <div class="service-box">
-        <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1048/1048311.png)" alt="">
+        <div class="service-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1048/1048311.png)">
+        </div>
         <div class="service-title">РЕМОНТ НА ЦИЛИНТРОВИ ГЛАВИ</div>
         <div class="service-desc">Професионален ремонт с гаранция</div>
     </div>
 
     <div class="service-box">
-        <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828640.png)" alt="">
+        <div class="service-icon">
+            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828640.png)">
+        </div>
         <div class="service-title">ГТП</div>
         <div class="service-desc">Годишни технически прегледи</div>
     </div>
 
 </div>
 
-<div class="info-grid">
-
-    <div class="info-box">
-        <div class="info-title">АДРЕС</div>
-        гр. Ловеч<br>
-        бул. Освобождение 7
-    </div>
-
-    <div class="info-box">
-        <div class="info-title">РАБОТНО ВРЕМЕ</div>
-        Понеделник – Петък<br>09:00 – 18:00<br><br>
-        Събота – Неделя<br>ПОЧИВНИ ДНИ
-    </div>
-
-</div>
-
-<div class="bottom-image">
-    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1581092334512-2a1d5a5d09cc?auto=format&fit=crop&w=2000&q=80)" alt="">
-</div>
-
 </body>
 </html>
+
