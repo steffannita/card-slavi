@@ -1,248 +1,361 @@
 <!DOCTYPE html>
+
 <html lang="bg">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Автосервиз Слави</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-    body {
-        margin: 0;
-        font-family: "Arial", sans-serif;
-        background: #f3eadd;
-        color: #1a1a1a;
-    }
 
-    .hero-container {
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 25px;
-        background: #f7f1e8;
-    }
+body {
 
-    .hero {
-        position: relative;
-        border-radius: 25px;
-        overflow: hidden;
-    }
+    margin: 0;
 
-    .hero img {
-        width: 100%;
-        height: auto;
-        display: block;
-        filter: brightness(0.55);
-    }
+    background: #f6f3ee;
 
-    .hero-text {
-        position: absolute;
-        top: 25%;
-        left: 6%;
-        color: #fff;
-        font-family: Georgia, serif;
-    }
+    font-family: 'Inter', sans-serif;
 
-    .hero-text h1 {
-        font-size: 52px;
-        margin: 0;
-        font-weight: bold;
-        line-height: 1.1;
-    }
+    color: #2c2c2c;
 
-    .hero-text .btn {
-        display: inline-block;
-        margin-top: 18px;
-        background: #d93523;
-        color: #fff;
-        padding: 12px 28px;
-        font-size: 16px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-decoration: none;
-    }
+}
 
-    /* Phone Blocks */
-    .contact-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin: 25px auto;
-        flex-wrap: wrap;
-    }
+.container {
 
-    .contact-box {
-        width: 300px;
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 18px 22px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+    max-width: 480px;
 
-    .contact-icon {
-        background: #ffe4e4;
-        padding: 14px;
-        border-radius: 50%;
-    }
+    margin: auto;
 
-    .contact-icon img {
-        width: 28px;
-        opacity: 0.8;
-    }
+    padding: 16px;
 
-    .contact-label {
-        font-size: 12px;
-        color: #888;
-        letter-spacing: 1px;
-    }
+}
 
-    .contact-phone {
-        font-size: 20px;
-        font-weight: bold;
-        color: #1a1a1a;
-    }
+/* HERO */
 
-    /* Title */
-    .section-title {
-        text-align: center;
-        margin: 40px 0 20px;
-        font-size: 28px;
-        font-family: Georgia, serif;
-        font-weight: bold;
-    }
+.hero {
 
-    .section-title img {
-        width: 22px;
-        vertical-align: middle;
-        margin: 0 8px;
-    }
+    height: 240px;
 
-    /* Services Grid */
-    .services {
-        display: grid;
-        max-width: 1100px;
-        margin: auto;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 22px;
-    }
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200') center/cover;
 
-    .service-box {
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 25px;
-        text-align: center;
-        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
-    }
+    border-radius: 18px;
 
-    .service-icon {
-        background: #ffe4e4;
-        padding: 18px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-bottom: 12px;
-    }
+    display: flex;
 
-    .service-icon img {
-        width: 40px;
-        opacity: 0.85;
-    }
+    align-items: center;
 
-    .service-title {
-        font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
+    justify-content: center;
 
-    .service-desc {
-        font-size: 14px;
-        color: #555;
-    }
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    margin-bottom: 10px;
+
+}
+
+/* ПО-ЧЕТИМ ТЕКСТ */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+
+        to bottom,
+
+        rgba(0,0,0,0.65),
+
+        rgba(0,0,0,0.4)
+
+    );
+
+    border-radius: 18px;
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.hero h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+
+}
+
+.divider {
+
+    width: 60px;
+
+    height: 2px;
+
+    background: #d6c7a1;
+
+    margin: 10px auto;
+
+}
+
+.subtitle {
+
+    font-size: 14px;
+
+    color: #eaeaea;
+
+}
+
+/* CONTACTS - БЕЗ OVERLAP */
+
+.contacts {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+.contact-card {
+
+    flex: 1;
+
+    background: #ffffff;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+
+    text-align: center;
+
+}
+
+.contact-title {
+
+    font-size: 12px;
+
+    color: #888;
+
+}
+
+.phone {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-top: 5px;
+
+}
+
+/* SECTION */
+
+.section-title {
+
+    text-align: center;
+
+    margin: 30px 0 15px;
+
+    font-family: 'Playfair Display', serif;
+
+    letter-spacing: 1px;
+
+}
+
+/* SERVICES */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+
+}
+
+.card-title {
+
+    margin-top: 8px;
+
+    font-weight: 600;
+
+}
+
+.card-desc {
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+/* INFO BOX */
+
+.info {
+
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    margin-top: 12px;
+
+    box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+
+}
+
+.label {
+
+    font-size: 13px;
+
+    color: #999;
+
+    margin-bottom: 4px;
+
+}
 
 </style>
+
 </head>
+
 <body>
 
-<div class="hero-container">
-    <div class="hero">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=2000&q=80)" alt="">
-        <div class="hero-text">
-            <h1>АВТОСЕРВИЗ<br>СЛАВИ</h1>
-            <a href="#" class="btn">ПРОФЕСИОНАЛНИ АВТО УСЛУГИ</a>
-        </div>
-    </div>
-</div>
+<div class="container">
 
-<!-- CONTACT ROW -->
-<div class="contact-row">
+<div class="hero">
 
-    <div class="contact-box">
-        <div class="contact-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/724/724664.png)">
-        </div>
-        <div>
-            <div class="contact-label">СЕРВИЗ</div>
-            <div class="contact-phone">087 668 9736</div>
-        </div>
-    </div>
+    <div class="hero-content">
 
-    <div class="contact-box">
-        <div class="contact-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828911.png)">
-        </div>
-        <div>
-            <div class="contact-label">ПРЕГЛЕДИ (ГТП)</div>
-            <div class="contact-phone">088 897 3069</div>
-        </div>
+        <h1>АВТОСЕРВИЗ СЛАВИ</h1>
+
+        <div class="divider"></div>
+
+        <div class="subtitle">Професионални авто услуги</div>
+
     </div>
 
 </div>
 
-<!-- SERVICES TITLE -->
-<div class="section-title">
-    <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828970.png)">
-    НАШИТЕ УСЛУГИ
-    <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828970.png)">
+<div class="contacts">
+
+<div class="contact-card">
+
+<div class="contact-title">СЕРВИЗ</div>
+
+<div class="phone">087 668 9736</div>
+
 </div>
 
-<!-- SERVICES GRID -->
-<div class="services">
+<div class="contact-card">
 
-    <div class="service-box">
-        <div class="service-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/847/847969.png)">
-        </div>
-        <div class="service-title">МОНТАЖ НА АГУ</div>
-        <div class="service-desc">Професионален монтаж и настройка на газови уредби</div>
-    </div>
+<div class="contact-title">ГТП</div>
 
-    <div class="service-box">
-        <div class="service-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/2965/2965879.png)">
-        </div>
-        <div class="service-title">АВТОРЕМОНТИ</div>
-        <div class="service-desc">Диагностика, ремонт и поддръжка на всички марки</div>
-    </div>
+<div class="phone">088 897 3069</div>
 
-    <div class="service-box">
-        <div class="service-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1048/1048311.png)">
-        </div>
-        <div class="service-title">РЕМОНТ НА ЦИЛИНТРОВИ ГЛАВИ</div>
-        <div class="service-desc">Професионален ремонт с гаранция</div>
-    </div>
+</div>
 
-    <div class="service-box">
-        <div class="service-icon">
-            <img src="[cdn-icons-png.flaticon.com](https://cdn-icons-png.flaticon.com/512/1828/1828640.png)">
-        </div>
-        <div class="service-title">ГТП</div>
-        <div class="service-desc">Годишни технически прегледи</div>
-    </div>
+</div>
+
+<div class="section-title">НАШИТЕ УСЛУГИ</div>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-title">Монтаж на АГУ</div>
+
+<div class="card-desc">Професионален монтаж</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">Авторемонти</div>
+
+<div class="card-desc">Всички марки</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">Ремонт на цилиндрови глави</div>
+
+<div class="card-desc">С гаранция</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-title">ГТП</div>
+
+<div class="card-desc">Технически прегледи</div>
+
+</div>
+
+</div>
+
+<div class="info">
+
+<div class="label">АДРЕС</div>
+
+гр. Ловеч<br>
+
+бул. Освобождение 7
+
+</div>
+
+<div class="info">
+
+<div class="label">РАБОТНО ВРЕМЕ</div>
+
+Понеделник – Петък: 09:00 – 18:00<br>
+
+Събота – Неделя: ПОЧИВНИ ДНИ
+
+</div>
 
 </div>
 
 </body>
-</html>
 
+</html>
