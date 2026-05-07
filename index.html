@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="bg">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Автосервиз Слави</title>
@@ -15,385 +11,210 @@
 <style>
 
 *{
-
     box-sizing:border-box;
-
 }
 
 body{
-
     margin:0;
-
     background:#f3eee5;
-
     font-family:'Inter',sans-serif;
-
     color:#1f1f1f;
-
 }
 
 .container{
-
-    max-width:480px;
-
+    max-width:420px;
     margin:auto;
-
-    padding:16px;
-
+    padding:10px;
 }
 
 /* HERO */
 
 .hero{
-
     position:relative;
-
-    height:320px;
-
-    border-radius:28px;
-
+    height:250px;
+    border-radius:22px;
     overflow:hidden;
-
     background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400') center/cover;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* ПО-СВЕТЪЛ OVERLAY ВЛЯВО */
+/* LIGHT OVERLAY */
 
 .hero::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(
-
         90deg,
-
         rgba(243,238,229,0.99) 0%,
-
-        rgba(243,238,229,0.96) 40%,
-
+        rgba(243,238,229,0.96) 42%,
         rgba(243,238,229,0.45) 65%,
-
         rgba(0,0,0,0.08) 100%
-
     );
-
 }
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
-    padding:40px 28px;
-
-    width:65%;
-
+    padding:26px 20px;
+    width:78%;
 }
 
 .hero h1{
-
     margin:0;
-
     line-height:0.92;
-
-    font-size:58px;
-
+    font-size:40px;
     font-family:'Cormorant Garamond',serif;
-
     font-weight:700;
-
     letter-spacing:-1px;
-
-    color:#121212;
-
-    text-shadow:0 1px 2px rgba(255,255,255,0.2);
-
+    color:#111;
 }
 
 .hero-line{
-
-    width:90px;
-
+    width:75px;
     height:3px;
-
     background:#202020;
-
-    margin:18px 0 20px;
-
+    margin:14px 0 16px;
     border-radius:10px;
-
 }
 
 .hero-badge{
-
     display:inline-block;
-
     background:#c92c38;
-
     color:white;
-
-    padding:13px 20px;
-
-    border-radius:14px;
-
-    font-size:13px;
-
+    padding:9px 13px;
+    border-radius:12px;
+    font-size:10px;
     font-weight:700;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
-    box-shadow:0 8px 18px rgba(201,44,56,0.28);
-
+    box-shadow:0 6px 16px rgba(201,44,56,0.25);
 }
 
 /* CONTACTS */
 
 .contacts{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
-    gap:14px;
-
-    margin-top:18px;
-
+    gap:8px;
+    margin-top:12px;
 }
 
 .contact-card{
-
     background:white;
-
-    border-radius:24px;
-
-    padding:18px;
-
+    border-radius:16px;
+    padding:10px;
     display:flex;
-
     align-items:center;
-
-    gap:14px;
-
-    box-shadow:0 8px 24px rgba(0,0,0,0.05);
-
+    gap:8px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
 .icon-circle{
-
-    width:52px;
-
-    height:52px;
-
+    width:38px;
+    height:38px;
     border-radius:50%;
-
     background:#fdecef;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:22px;
-
+    font-size:16px;
 }
 
 .contact-title{
-
-    font-size:12px;
-
+    font-size:10px;
     color:#8f8f8f;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
-    margin-bottom:4px;
-
+    margin-bottom:3px;
 }
 
 .contact-phone{
-
-    font-size:16px;
-
+    font-size:12px;
     font-weight:700;
-
 }
 
 /* SECTION */
 
 .section-title{
-
     text-align:center;
-
-    margin:34px 0 22px;
-
+    margin:22px 0 16px;
     font-family:'Cormorant Garamond',serif;
-
-    font-size:30px;
-
+    font-size:24px;
     font-weight:700;
-
     letter-spacing:1px;
-
 }
 
 /* SERVICES */
 
 .grid{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
-    gap:16px;
-
+    gap:10px;
 }
 
 .card{
-
     background:white;
-
-    border-radius:26px;
-
-    padding:26px 18px;
-
+    border-radius:18px;
+    padding:16px 10px;
     text-align:center;
-
-    box-shadow:0 8px 24px rgba(0,0,0,0.05);
-
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
 .service-icon{
-
-    width:74px;
-
-    height:74px;
-
+    width:52px;
+    height:52px;
     margin:auto;
-
     border-radius:50%;
-
     background:#fdecef;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:30px;
-
-    margin-bottom:18px;
-
+    font-size:22px;
+    margin-bottom:12px;
 }
 
 .card-title{
-
-    font-size:15px;
-
+    font-size:12px;
     font-weight:700;
-
-    margin-bottom:10px;
-
+    margin-bottom:7px;
 }
 
 .card-desc{
-
-    font-size:14px;
-
+    font-size:10px;
     color:#777;
-
-    line-height:1.5;
-
+    line-height:1.4;
 }
 
 /* INFO */
 
 .info{
-
     background:white;
-
-    border-radius:24px;
-
-    padding:22px;
-
-    margin-top:18px;
-
-    box-shadow:0 8px 24px rgba(0,0,0,0.05);
-
+    border-radius:18px;
+    padding:16px;
+    margin-top:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
 .info-label{
-
-    font-size:12px;
-
+    font-size:10px;
     letter-spacing:1px;
-
     text-transform:uppercase;
-
     color:#9a9a9a;
-
-    margin-bottom:8px;
-
+    margin-bottom:7px;
 }
 
 .info-text{
-
-    line-height:1.7;
-
+    font-size:13px;
+    line-height:1.5;
     font-weight:500;
-
 }
 
 .bottom-space{
-
-    height:30px;
-
-}
-
-/* MOBILE */
-
-@media(max-width:460px){
-
-.hero h1{
-
-    font-size:48px;
-
-}
-
-.hero-content{
-
-    width:75%;
-
-}
-
-.grid{
-
-    gap:12px;
-
-}
-
-.card{
-
-    padding:22px 14px;
-
-}
-
+    height:20px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -407,19 +228,14 @@ body{
 <div class="hero-content">
 
 <h1>
-
 АВТОСЕРВИЗ<br>
-
 СЛАВИ
-
 </h1>
 
 <div class="hero-line"></div>
 
 <div class="hero-badge">
-
 ПРОФЕСИОНАЛНИ АВТО УСЛУГИ
-
 </div>
 
 </div>
@@ -435,11 +251,8 @@ body{
 <div class="icon-circle">📞</div>
 
 <div>
-
 <div class="contact-title">СЕРВИЗ</div>
-
 <div class="contact-phone">087 668 9736</div>
-
 </div>
 
 </div>
@@ -449,11 +262,8 @@ body{
 <div class="icon-circle">📋</div>
 
 <div>
-
 <div class="contact-title">ПРЕГЛЕДИ (ГТП)</div>
-
 <div class="contact-phone">088 897 3069</div>
-
 </div>
 
 </div>
@@ -463,9 +273,7 @@ body{
 <!-- SECTION -->
 
 <div class="section-title">
-
 🔧 НАШИТЕ УСЛУГИ 🔧
-
 </div>
 
 <!-- SERVICES -->
@@ -477,15 +285,11 @@ body{
 <div class="service-icon">⛽</div>
 
 <div class="card-title">
-
 МОНТАЖ НА АГУ
-
 </div>
 
 <div class="card-desc">
-
 Професионален монтаж и настройка на газови уредби
-
 </div>
 
 </div>
@@ -495,15 +299,11 @@ body{
 <div class="service-icon">🔧</div>
 
 <div class="card-title">
-
 АВТОРЕМОНТИ
-
 </div>
 
 <div class="card-desc">
-
 Диагностика, ремонт и поддръжка на всички марки
-
 </div>
 
 </div>
@@ -513,15 +313,11 @@ body{
 <div class="service-icon">⚙️</div>
 
 <div class="card-title">
-
-РЕМОНТ НА ЦИЛИНДРОВИ ГЛАВИ
-
+РЕМОНТ НА ЦИЛИНДРОВА ГЛАВА
 </div>
 
 <div class="card-desc">
-
 Професионален ремонт с гаранция
-
 </div>
 
 </div>
@@ -531,15 +327,11 @@ body{
 <div class="service-icon">✅</div>
 
 <div class="card-title">
-
 ГТП
-
 </div>
 
 <div class="card-desc">
-
 Годишни технически прегледи
-
 </div>
 
 </div>
@@ -551,17 +343,12 @@ body{
 <div class="info">
 
 <div class="info-label">
-
 АДРЕС
-
 </div>
 
 <div class="info-text">
-
 гр. Ловеч<br>
-
 бул. Освобождение 7
-
 </div>
 
 </div>
@@ -569,17 +356,12 @@ body{
 <div class="info">
 
 <div class="info-label">
-
 РАБОТНО ВРЕМЕ
-
 </div>
 
 <div class="info-text">
-
 Понеделник – Петък: 09:00 – 18:00<br>
-
 Събота – Неделя: ПОЧИВНИ ДНИ
-
 </div>
 
 </div>
@@ -589,5 +371,4 @@ body{
 </div>
 
 </body>
-
 </html>
